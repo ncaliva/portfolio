@@ -1,0 +1,122 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="P3rWQpsldcOBJg1xqemh">
+    <mxGraphModel dx="2054" dy="1201" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-9" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;align=center;" value="1. IP de ejemplo.com? (puerto 53)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="181" y="219" as="sourcePoint" />
+            <mxPoint x="441" y="219" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-12" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;align=center;" value="2. SYN (puerto 443)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="181" y="399" as="sourcePoint" />
+            <mxPoint x="701" y="399" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-14" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;align=center;" value="2. ACK">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="181" y="549" as="sourcePoint" />
+            <mxPoint x="701" y="549" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0F2LI456xqP5x7i4_SCc-5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;align=center;" value="5. HTTP GET / (cifrado)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="181" y="885" as="sourcePoint" />
+            <mxPoint x="701" y="885" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0F2LI456xqP5x7i4_SCc-9" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;" value="3. ClientHello (versiones TLS, cifrados, nombre del sitio)&amp;nbsp;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="180" y="615" as="sourcePoint" />
+            <mxPoint x="700" y="615" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="Navegador" vertex="1">
+          <mxGeometry height="60" width="120" x="121" y="69" as="geometry" />
+        </mxCell>
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-10" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;align=center;" value="1. Respuesta: IP del servidor">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="441" y="299" as="sourcePoint" />
+            <mxPoint x="181" y="299" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="Resolver DNS" vertex="1">
+          <mxGeometry height="60" width="120" x="381" y="69" as="geometry" />
+        </mxCell>
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-15" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;align=center;" value="2. SYN-ACK">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="701" y="479" as="sourcePoint" />
+            <mxPoint x="181" y="479" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-18" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;align=center;" value="3. Certificado Digital">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="701" y="675" as="sourcePoint" />
+            <mxPoint x="181" y="675" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0F2LI456xqP5x7i4_SCc-6" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;align=center;" value="6. HTTP 200 OK + página (cifrado)">
+          <mxGeometry relative="1" x="0.0038" y="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="701" y="955" as="sourcePoint" />
+            <mxPoint x="181" y="955" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="Servidor Web" vertex="1">
+          <mxGeometry height="60" width="120" x="641" y="69" as="geometry" />
+        </mxCell>
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-4" edge="1" parent="1" source="yAP0y8AgmSEPgWmGmYJy-16" style="endArrow=none;dashed=1;html=1;rounded=0;defaultLabelBackgroundColor=page;align=center;" value="">
+          <mxGeometry height="50" relative="1" width="50" x="0.94" as="geometry">
+            <Array as="points">
+              <mxPoint x="180.5" y="169" />
+            </Array>
+            <mxPoint x="180.5" y="1129" as="sourcePoint" />
+            <mxPoint x="180.5" y="129" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-8" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;defaultLabelBackgroundColor=page;align=center;" value="">
+          <mxGeometry height="50" relative="1" width="50" x="0.94" as="geometry">
+            <Array as="points">
+              <mxPoint x="700.5" y="169" />
+            </Array>
+            <mxPoint x="701" y="1129" as="sourcePoint" />
+            <mxPoint x="700.5" y="129" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-17" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;defaultLabelBackgroundColor=page;align=center;" target="yAP0y8AgmSEPgWmGmYJy-16" value="">
+          <mxGeometry height="50" relative="1" width="50" x="0.94" as="geometry">
+            <Array as="points" />
+            <mxPoint x="180.5" y="1129" as="sourcePoint" />
+            <mxPoint x="180.5" y="129" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yAP0y8AgmSEPgWmGmYJy-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;align=center;" value="3. Valida: CA confiable, nombre, vigencia" vertex="1">
+          <mxGeometry height="70" width="120" x="121" y="705" as="geometry" />
+        </mxCell>
+        <mxCell id="0F2LI456xqP5x7i4_SCc-4" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;align=center;" value="4. Acuerdo de clave de sesión">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="181" y="815" as="sourcePoint" />
+            <mxPoint x="701" y="815" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0F2LI456xqP5x7i4_SCc-7" parent="1" style="text;whiteSpace=wrap;html=1;fontSize=17;" value="Flujo de una request HTTPS con TLS" vertex="1">
+          <mxGeometry height="80" width="310" x="300" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="0F2LI456xqP5x7i4_SCc-8" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;rounded=0;defaultLabelBackgroundColor=page;align=center;" value="">
+          <mxGeometry height="50" relative="1" width="50" x="0.94" as="geometry">
+            <Array as="points">
+              <mxPoint x="441" y="169" />
+            </Array>
+            <mxPoint x="441.5" y="1129" as="sourcePoint" />
+            <mxPoint x="441" y="129" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
