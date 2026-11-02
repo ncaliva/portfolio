@@ -12,6 +12,8 @@ Tienda online ficticia que vende productos a clientes por internet. Sus 5 compon
 - **Empleados remotos:** cumplen la misma función que los de oficina, pero se conectan desde afuera mediante una VPN client-to-site, que tuneliza la conexión hacia la red de la oficina.
 - **Servidor de archivos:** repositorio compartido donde los empleados guardan y usan los archivos de la empresa.
 
+Además, la empresa cuenta con un servidor VPN que permite el acceso remoto de los empleados.
+
 ## Zonas de red
 
 | Zona | Qué vive ahí | Por qué |
@@ -32,3 +34,8 @@ Las reglas se evalúan en orden y gana la primera que coincide con el tráfico. 
 | 5 | Internet (untrusted) | Servidor VPN (screened subnet) | 500/UDP, 4500/UDP, ESP (protocolo 50) | Permitir |
 | 6 | Servidor VPN (screened subnet) | Servidor de archivos (trusted) | 445/TCP | Permitir |
 | 7 | Cualquiera | Cualquiera | Todos | **Denegar** (y registrar) |
+
+## Decisiones de diseño
+- **La base de datos va en la zona de confianza, no en la screened subnet.** Guarda la información de los clientes y los pedidos, así que es el activo más valioso de la tienda. El sitio web es el componente más expuesto y el más probable de ser comprometido; si la base estuviera en la misma zona, un atacante que tome el sitio tendría la base al lado. En la zona de confianza, la regla 2 es el único camino hacia ella: solo el sitio web, solo por el puerto 1433.
+- **El servidor VPN va en la screened subnet, no en la zona de confianza.** Es una de las dos piezas que internet tiene que poder alcanzar directamente (regla 5, solo por 500/UDP, 4500/UDP y ESP), así que recibe escaneos e intentos de ataque constantes. Si estuviera en la zona de confianza y lo comprometen, el atacante quedaría dentro de la red interna, con acceso directo a los archivos y a la base de datos. En la screened subnet, lo único que ese servidor puede alcanzar es el servidor de archivos por el puerto 445 (regla 6), y todo lo demás lo corta la regla 7.
+- **El puerto 80 queda cerrado: el sitio web solo recibe tráfico por el 443.** HTTP viaja sin cifrar, así que cualquiera ubicado en el camino entre el cliente y el servidor podría leer o modificar lo que se envía; con HTTPS ese contenido va cifrado con TLS. La alternativa era abrir el 80 solo para redirigir automáticamente a HTTPS, evitando que un cliente que escribe la dirección sin "https" no pueda cargar el sitio. Se descartó para dejar un único puerto expuesto, aceptando el costo de que algunos clientes podrían ver el sitio como caído si entran por HTTP. Esto se refleja en la regla 1, que solo permite 443/TCP, y en la regla 7, que bloquea el resto.
